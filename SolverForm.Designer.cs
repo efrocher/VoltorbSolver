@@ -37,6 +37,7 @@
             this.GameGridLayout = new System.Windows.Forms.TableLayoutPanel();
             this.ResetButton = new System.Windows.Forms.Button();
             this.AnalyseButton = new System.Windows.Forms.Button();
+            this.generateGridButton = new System.Windows.Forms.Button();
             this.MainPanel.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -151,11 +152,23 @@
             this.AnalyseButton.UseVisualStyleBackColor = true;
             this.AnalyseButton.Click += new System.EventHandler(this.AnalyseButton_Click);
             // 
+            // generateGridButton
+            // 
+            this.generateGridButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.generateGridButton.Location = new System.Drawing.Point(270, 12);
+            this.generateGridButton.Name = "generateGridButton";
+            this.generateGridButton.Size = new System.Drawing.Size(123, 38);
+            this.generateGridButton.TabIndex = 2;
+            this.generateGridButton.Text = "Generate";
+            this.generateGridButton.UseVisualStyleBackColor = true;
+            this.generateGridButton.Click += new System.EventHandler(this.GenerateGridButton_Click);
+            // 
             // SolverForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 620);
+            this.Controls.Add(this.generateGridButton);
             this.Controls.Add(this.AnalyseButton);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.ResetButton);
@@ -181,5 +194,6 @@
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel AnalysisTimeLabel;
         private CellInfoControl CellInfos;
+        private Button generateGridButton;
     }
 }
