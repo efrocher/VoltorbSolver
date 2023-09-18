@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.CellInfos = new VoltorbSolver.CellInfoControl();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.AnalysisTimeLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ColumnInfosLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -36,7 +37,6 @@
             this.GameGridLayout = new System.Windows.Forms.TableLayoutPanel();
             this.ResetButton = new System.Windows.Forms.Button();
             this.AnalyseButton = new System.Windows.Forms.Button();
-            this.CellInfos = new VoltorbSolver.CellInfoControl();
             this.MainPanel.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,14 @@
             this.MainPanel.Size = new System.Drawing.Size(706, 555);
             this.MainPanel.TabIndex = 1;
             // 
+            // CellInfos
+            // 
+            this.CellInfos.Location = new System.Drawing.Point(28, 130);
+            this.CellInfos.Name = "CellInfos";
+            this.CellInfos.Padding = new System.Windows.Forms.Padding(6);
+            this.CellInfos.Size = new System.Drawing.Size(193, 102);
+            this.CellInfos.TabIndex = 4;
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -69,8 +77,8 @@
             // AnalysisTimeLabel
             // 
             this.AnalysisTimeLabel.Name = "AnalysisTimeLabel";
-            this.AnalysisTimeLabel.Size = new System.Drawing.Size(59, 17);
-            this.AnalysisTimeLabel.Text = "Analysis : ";
+            this.AnalysisTimeLabel.Size = new System.Drawing.Size(50, 17);
+            this.AnalysisTimeLabel.Text = "Analysis";
             // 
             // ColumnInfosLayout
             // 
@@ -142,13 +150,6 @@
             this.AnalyseButton.Text = "Analyse";
             this.AnalyseButton.UseVisualStyleBackColor = true;
             this.AnalyseButton.Click += new System.EventHandler(this.AnalyseButton_Click);
-            // 
-            // CellInfos
-            // 
-            this.CellInfos.Location = new System.Drawing.Point(28, 130);
-            this.CellInfos.Name = "CellInfos";
-            this.CellInfos.Size = new System.Drawing.Size(193, 102);
-            this.CellInfos.TabIndex = 4;
             // 
             // SolverForm
             // 

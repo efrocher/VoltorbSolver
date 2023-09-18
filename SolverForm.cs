@@ -18,7 +18,9 @@ namespace VoltorbSolver
         {
             InitializeComponent();
 
-            for(int x = 0; x < 5; x++)
+            ResetAnalysisTimeLabel();
+
+            for (int x = 0; x < 5; x++)
             for(int y = 0; y < 5; y++)
             {
                 CellControl c = new(GameGrid[x, y], CellInfos);
@@ -56,9 +58,15 @@ namespace VoltorbSolver
                 c.RefreshVisuals();
         }
 
+        public void ResetAnalysisTimeLabel()
+        {
+            AnalysisTimeLabel.Text = "";
+        }
         public void UpdateAnalysisTimeLabel(int solutionsCount, long ellapsedMs)
         {
-            AnalysisTimeLabel.Text = $"Analysis : {(solutionsCount > 0 ? "SAT" : "UNSAT")} [{solutionsCount} - {ellapsedMs}ms]";
+            AnalysisTimeLabel.Text = $"Analysis: {(solutionsCount > 0 ? "SAT" : "UNSAT")} [{solutionsCount} - {ellapsedMs}ms]";
+
+            AnalysisTimeLabel.BackColor = solutionsCount > 0 ? Color.LightGreen : Color.LightCoral;
         }
         #endregion
 
@@ -67,6 +75,7 @@ namespace VoltorbSolver
         {
             GameGrid.Reset();
             RefreshVisuals();
+            ResetAnalysisTimeLabel();
         }
 
         private void AnalyseButton_Click(object sender, EventArgs e)
